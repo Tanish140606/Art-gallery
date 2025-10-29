@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Modern Art Gallery - Explore beautiful artworks">
+    <title>Modern Art Gallery</title>
+    
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">Artistry</h1>
+            
+            <!-- Navigation Menu -->
+            <nav class="nav">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#gallery" class="nav-link">Gallery</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero/Welcome Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h2 class="hero-title">Welcome to Our Gallery</h2>
+            <p class="hero-text">Discover stunning artworks from talented artists around the world</p>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+            <h2 class="section-title">Our Collection</h2>
+            
+            <!-- Grid of artwork images -->
+            <div class="gallery-grid">
+                <!-- Each gallery item - clicking opens lightbox -->
+                <div class="gallery-item" onclick="openLightbox(0)">
+                    <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=500" alt="Abstract Art 1">
+                    <div class="gallery-overlay">
+                        <span class="view-text">View</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item" onclick="openLightbox(1)">
+                    <img src="https://images.unsplash.com/photo-1561214115-f2f134cc4912?w=500" alt="Abstract Art 2">
+                    <div class="gallery-overlay">
+                        <span class="view-text">View</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item" onclick="openLightbox(2)">
+                    <img src="https://images.unsplash.com/photo-1541961017774-22349e4a1262?w=500" alt="Abstract Art 3">
+                    <div class="gallery-overlay">
+                        <span class="view-text">View</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item" onclick="openLightbox(3)">
+                    <img src="https://images.unsplash.com/photo-1578301978693-85fa9c0320b9?w=500" alt="Abstract Art 4">
+                    <div class="gallery-overlay">
+                        <span class="view-text">View</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item" onclick="openLightbox(4)">
+                    <img src="https://images.unsplash.com/photo-1547826039-bfc35e0f1ea8?w=500" alt="Abstract Art 5">
+                    <div class="gallery-overlay">
+                        <span class="view-text">View</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item" onclick="openLightbox(5)">
+                    <img src="https://artbydevona.com/cdn/shop/files/showermewithloveunder1m_533x.jpg?v=1695218949" alt="Abstract Art 6">
+                    <div class="gallery-overlay">
+                        <span class="view-text">View</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal (hidden by default) -->
+    <div id="lightbox" class="lightbox">
+        <!-- Close button -->
+        <span class="close" onclick="closeLightbox()">&times;</span>
+        
+        <!-- Image container -->
+        <div class="lightbox-content">
+            <img id="lightbox-img" src="" alt="Artwork">
+        </div>
+
+        <!-- Navigation buttons -->
+        <button class="lightbox-nav prev" onclick="changeImage(-1)">&#10094;</button>
+        <button class="lightbox-nav next" onclick="changeImage(1)">&#10095;</button>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2 class="section-title">About Us</h2>
+            <div class="about-content">
+                <p>Welcome to Artistry, a curated online gallery showcasing contemporary and abstract art from emerging and established artists worldwide. Our mission is to make art accessible to everyone and provide a platform for talented creators to share their vision.</p>
+                <p>Each piece in our collection has been carefully selected to inspire, provoke thought, and bring beauty into your space. We believe art has the power to transform environments and enrich lives.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer id="contact" class="footer">
+        <div class="container">
+            <p class="footer-text">&copy; 2025 Artistry Gallery. All rights reserved.</p>
+            
+            <!-- Social Media Icons (using text for simplicity) -->
+            <div class="social-links">
+                <a href="#" class="social-link">Facebook</a>
+                <a href="#" class="social-link">Instagram</a>
+                <a href="#" class="social-link">Twitter</a>
+                <a href="#" class="social-link">Pinterest</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Link to external JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
